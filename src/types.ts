@@ -30,7 +30,10 @@ export interface GetForecastArgs {
   city: string;
   days?: number;
 }
-
+export interface GetLangKeyArgs {
+  dirNames:string
+  keys: string[]
+}
 // Type guard for forecast arguments
 export function isValidForecastArgs(args: any): args is GetForecastArgs {
   return (
@@ -39,5 +42,16 @@ export function isValidForecastArgs(args: any): args is GetForecastArgs {
     "url" in args &&
     typeof args.url === "string" &&
     (args.url !== '' )
+  );
+}
+
+// Type guard for forecast arguments
+export function isValidLangToolsArgs(args: any): args is GetLangKeyArgs {
+  return (
+    typeof args === "object" && 
+    args !== null && 
+    "dirName" in args &&
+    typeof args.dirName === "string" &&
+    (args.dirName !== '' )
   );
 }

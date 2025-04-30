@@ -72,7 +72,7 @@ async function getApiDetail(url: string) {
     const data = await axios.post(detailAPiUrl, formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
-        Authorization: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnQiOjAsImV4cCI6MTc0MzY1ODQ4NDY5NCwidXNlcklkIjoiNiJ9.As7NVG_euOd-jrAfpI1F9H8LIHfoqtXunZO7mk-YiQ4'
+        Authorization: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjbGllbnQiOjAsImV4cCI6MTc0NjI2Mjk5OTAzMywidXNlcklkIjoiNiJ9.STZmfErJBZizVr6m-NOZRBf0V37qK2OGZsBqxzoAK0g'
       },
     });
     if (data.data.statusCode === '200001') {
